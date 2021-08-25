@@ -25,8 +25,8 @@ return require('packer').startup(function()
       'kyazdani42/nvim-tree.lua',
       requires = 'kyazdani42/nvim-web-devicons'
   }
-  use 'ii14/onedark.nvim'
---  use 'shaunsingh/moonlight.nvim'
+--  use 'ii14/onedark.nvim'
+  use 'shaunsingh/moonlight.nvim'
   use 'nvim-lua/lsp-status.nvim'
   use 'sheerun/vim-polyglot'
   use 'xiyaowong/accelerated-jk.nvim'
