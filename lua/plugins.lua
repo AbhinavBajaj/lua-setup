@@ -25,11 +25,13 @@ return require('packer').startup(function()
       'kyazdani42/nvim-tree.lua',
       requires = 'kyazdani42/nvim-web-devicons'
   }
---  use 'ii14/onedark.nvim'
-  use 'shaunsingh/moonlight.nvim'
+  use 'marko-cerovac/material.nvim'
   use 'nvim-lua/lsp-status.nvim'
   use 'sheerun/vim-polyglot'
   use 'xiyaowong/accelerated-jk.nvim'
+  use 'ojroques/vim-oscyank'
+  use 'hoob3rt/lualine.nvim'
+
 --  use 'airblade/vim-gitgutter'                         -- gutter for git status
   -- use 'Mofiqul/vscode.nvim' -- color schemes
   --  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}

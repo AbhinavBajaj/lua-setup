@@ -30,23 +30,17 @@ vim.api.nvim_set_keymap('x', 'J', ':move \'<+1<CR>gv-gv\'', { noremap = true, si
 
 vim.g.onedark_termcolors=256
 
-
 vim.g.synmaxcol=128
 
+-- use old regex 
+vim.g.re=1
 
+-- yank to system clipboard
+vim.api.nvim_set_keymap('v', '<Leader>c', ':OSCYank<CR>', { noremap = true, silent = true})
 
+-- yy wil yank to system clipboard wohoo
+vim.api.nvim_exec([[autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | OSCYankReg " | endif]], false)
 
--- Example config in lua
--- vim.g.moonlight_italic_comments = true
--- vim.g.moonlight_italic_keywords = true
--- vim.g.moonlight_italic_functions = true
--- vim.g.moonlight_italic_variables = false
--- vim.g.moonlight_contrast = true
--- vim.g.moonlight_borders = false 
--- vim.g.moonlight_disable_background = true
-
--- Load the colorscheme
--- require('moonlight').set()
 
 -- TAB completion
 -- vim.api.nvim_set_keymap('i', '<expr><TAB>', 'pumvisible() ? \"\\<C-n>\" : \"\\<TAB>\"', { noremap = true, silent = true})
