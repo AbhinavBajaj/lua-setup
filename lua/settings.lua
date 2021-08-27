@@ -44,7 +44,5 @@ vim.o.list=false
 vim.o.lazyredraw=true
 vim.o.modifiable=true
 
--- vim.lsp.set_log_level("debug")
-
-
--- vim.cmd('colorscheme codedark')
+-- use old regex 
+vim.g.re=1

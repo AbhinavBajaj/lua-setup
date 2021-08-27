@@ -28,12 +28,10 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', { noremap = true, sile
 vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv\'', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('x', 'J', ':move \'<+1<CR>gv-gv\'', { noremap = true, silent = true})
 
-vim.g.onedark_termcolors=256
+-- vim.g.onedark_termcolors=256
 
-vim.g.synmaxcol=128
+-- vim.g.synmaxcol=128
 
--- use old regex 
-vim.g.re=1
 
 -- yank to system clipboard
 vim.api.nvim_set_keymap('v', '<Leader>c', ':OSCYank<CR>', { noremap = true, silent = true})
@@ -41,6 +39,11 @@ vim.api.nvim_set_keymap('v', '<Leader>c', ':OSCYank<CR>', { noremap = true, sile
 -- yy wil yank to system clipboard wohoo
 vim.api.nvim_exec([[autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | OSCYankReg " | endif]], false)
 
+-- unset Ctr i 
+vim.api.nvim_del_keymap('n', '<C-i>')
+
+-- show tree on startup (wont work)
+-- vim.api.nvim_command('NvimTreeToggle<CR>')
 
 -- TAB completion
 -- vim.api.nvim_set_keymap('i', '<expr><TAB>', 'pumvisible() ? \"\\<C-n>\" : \"\\<TAB>\"', { noremap = true, silent = true})
